@@ -10,7 +10,7 @@
   <body>
     <div id="main-container">
       <div id="Container">
-        <h1>TypingMeter</h1>
+        <h1 id="heading">TypingMeter</h1>
         <select id="option">
           <option id="easy">Low</option>
           <option id="medium">Medium</option>
@@ -18,7 +18,7 @@
         </select>
       </div>
       <div id="time">
-        <h2 id="choose">Choose Time for Typing Test</h2>
+        <h2 id="choose">Choose Time Duration</h2>
         <div id="time-select">
           <div class="time-interval">
             <input
@@ -41,13 +41,7 @@
             <label for="sec30">30 Sec</label>
           </div>
           <div class="time-interval">
-            <input
-              type="radio"
-              name="time"
-              value="min1"
-              id="min1"
-              class="timeselect"
-            />
+            <input type="radio"name="time"value="min1"id="min1"class="timeselect"/>
             <label for="min1">1 min</label>
           </div>
           <div class="time-interval">
@@ -64,7 +58,7 @@
       </div>
       <div id="start-timer">
         <p id="timechoose">0</p>
-        <!-- <span id="sec"> Seconds</span> -->
+        <p id="sec"> Seconds</p>
       </div>
 
       <div id="text">
@@ -78,7 +72,7 @@
     </div>
 
     <div id="result">
-      <h1>Your Typing Result</h1>
+      <h1 id="type-result">Your Typing Result</h1>
       <table>
         <tr>
           <th>Wpm</th>

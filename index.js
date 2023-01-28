@@ -8,11 +8,12 @@ let starttest = document.getElementById("start");
 let textarea = document.getElementById("typing");
 let maincontainer = document.getElementById("main-container");
 let result = document.getElementById("result");
+let sec=document.getElementById("sec")
 let againtest = document.getElementById("again");
 let wordPerMinute = document.getElementById("wpm");
 let Accuracy = document.getElementById("accuracy");
 let netPerMin = document.getElementById("npm");
-
+console.log(sec)
 
 starttest.disabled = true;
 textarea.disabled = true;
@@ -119,6 +120,7 @@ for (let j = 0; j < timerselect.length; j++) {
         wordPerMinute.innerText = wpm;
         Accuracy.innerText = accuracy;
         netPerMin.innerText = npm;
+        sec.style.display='none';
 
         setTimeout(() => {
           maincontainer.style.display = "none";
