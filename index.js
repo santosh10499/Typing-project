@@ -17,7 +17,7 @@ console.log(sec)
 
 starttest.disabled = true;
 textarea.disabled = true;
-// const quoteArr = array[0].split("");
+
 
 //========================================= this is for for choose level of test and and comapre paragraph and input text===========================================
 
@@ -27,51 +27,27 @@ let array = [
   `The cheerful business, interestingly go because some milk boldly see by a positive soup which, became a obedient, approachable approval. The cheerful business interestingly go because some milk boldly "see" by a positive soup which, became a obedient, approachable approval. The cheerful business interestingly go because some milk boldly see by a positive soup which, became a obedient, approachable approval.`,
 ];
 
-// const quoteArr = array[0].split("");
 
-// quoteArr.forEach((char, index) => {
-//   const newSpan = document.createElement("span");
-//   newSpan.innerText = char;
-//   text.append(newSpan);
-// });
 createSpan(0);
 
 option.addEventListener("change", () => {
-  // console.log(option.value);
+  
 
   if (option.value == "Low") {
     text.innerText = "";
     createSpan(0);
-    // const quoteArr = array[0].split("");
-
-    // quoteArr.forEach((char, index) => {
-    //   const newSpan = document.createElement("span");
-    //   newSpan.innerText = char;
-    //   text.append(newSpan);
-    // });
+    
   } 
   else if (option.value == "Medium") {
     text.innerText = "";
     createSpan(1);
 
-    // const quoteArr = array[1].split("");
-
-    // quoteArr.forEach((char, index) => {
-    //   const newSpan = document.createElement("span");
-    //   newSpan.innerText = char;
-    //   text.append(newSpan);
-    // });
-  } else if (option.value == "Hard") {
+    
+  } else if (option.value == "High") {
     text.innerText = "";
     createSpan(2);
 
-    // const quoteArr = array[2].split("");
-
-    // quoteArr.forEach((char, index) => {
-    //   const newSpan = document.createElement("span");
-    //   newSpan.innerText = char;
-    //   text.append(newSpan);
-    // });
+    
   }
 });
 ////=====================End===================================================================
@@ -85,9 +61,9 @@ function getchoosetime() {
       starttest.disabled = false;
 
       timeChoose = timerselect[i].id;
-    let d=document.getElementById(`${timeChoose}`);
-    d.parentNode.style.backgroundColor="burlywood";
+    
     }
+    
   }
   return timeChoose;
 }
@@ -116,11 +92,14 @@ for (let j = 0; j < timerselect.length; j++) {
 
 {
   start.addEventListener("click", () => {
+
     startTime = new Date();
     textarea.disabled = false;
     textarea.focus();
     let stop = setInterval(() => {
       time.innerText--;
+
+
       if (time.innerText == 0) {
         endTime = new Date();
         let accuracy = calculateWordAccuracy(textarea.value, text.innerText);
@@ -208,8 +187,8 @@ function npmCalculating(startTime, endTime) {
 //======================================================== calculate Accurecy====================================
 
 function calculateWordAccuracy(typedText, correctText) {
-  typedText = typedText.toLowerCase();
-  correctText = correctText.toLowerCase();
+  // typedText = typedText.toLowerCase();
+  // correctText = correctText.toLowerCase();
 
   let typedWords = typedText.split(" ");
   let correctWords = correctText.split(" ");
